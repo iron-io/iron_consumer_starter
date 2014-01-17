@@ -1,0 +1,22 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    iron_consumer (0.0.1)
+      iron_mq (>= 4.0.0)
+    iron_core (1.0.3)
+      rest (>= 2.6.4)
+    iron_mq (4.0.5)
+      iron_core (>= 0.5.1)
+    mime-types (2.0)
+    net-http-persistent (2.9)
+    rest (2.6.5)
+      net-http-persistent
+      rest-client (>= 0.3.0)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  iron_consumer

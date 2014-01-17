@@ -1,0 +1,7 @@
+runtime 'ruby'
+
+gemfile 'Gemfile'
+file 'iron.json'
+
+exec 'local.rb'
+
