@@ -1,5 +1,5 @@
-iron_consumer_starter
-=====================
+IronConsumer Starter Pack
+========================
 
 This is some start worker code, you can run it as is to test it, then modify it as you see fit.
 
@@ -26,4 +26,5 @@ or to mobile phones.
 ## Now upload and let IronWorker do the rest of the work
 
 1. Run `iron_worker upload consumer`
-1. Run iron_worker
+1. Schedule it: `iron_worker schedule --run-every 60 consumer`
+

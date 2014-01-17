@@ -1,5 +1,4 @@
 puts "Got message: #{IronConsumer.message.body}"
-puts IronConsumer.message.body
 # transform body or generate something
 username = "Travis" # Would normally get this from database for user
 body = JSON.parse(IronConsumer.message.body)["mystring"].gsub("#NAME#", username)

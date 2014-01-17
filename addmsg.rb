@@ -6,12 +6,10 @@ mq = IronMQ::Client.new()
 
 # qname defined by user too
 qname = "testq"
-
 queue = mq.queue(qname)
-
 msg = {
     "mystring" => "Hello #NAME#!"
 }
 queue.post(msg.to_json)
 
-p mq.project_id
+puts "Added message to queue: #{queue.name} in project: #{mq.project_id}"
