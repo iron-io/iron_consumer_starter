@@ -1,7 +1,9 @@
 IronConsumer Starter Pack
 ========================
 
-This is some start worker code, you can run it as is to test it, then modify it as you see fit.
+This is some starter worker code that users the iron_consumer gem: https://github.com/iron-io/iron_consumer
+
+You can run it as is to test it, then modify it as you see fit.
 
 ## Getting Started
 
