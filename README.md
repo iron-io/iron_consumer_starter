@@ -12,7 +12,7 @@ Let's run the quick example first:
 1. Clone this repo `git clone https://github.com/iron-io/iron_consumer_starter.git`
 1. Make a copy of `example.iron.json` called `iron.json` and update it with your token and project id (get these from HUD)
 1. Run `bundle update`
-1. Now let's add a dummy message to a queue on IronMQ: `ruby addmsg.rb`
+1. Now let's add a dummy message to a queue on IronMQ (run it a few times if you want): `ruby addmsg.rb`
 1. And process it: `ruby local.rb`
 
 ## Modify the worker to do what you want
