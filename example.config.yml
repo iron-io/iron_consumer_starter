@@ -9,3 +9,8 @@ workqueue_alertqueue: myqueue_alerts
 # Name of worker to start processing workqueue
 worker: consumer
 
+# Setup code to run
+setup: usersetup.rb
+# Main worker processing code
+code: usercode.rb
+
