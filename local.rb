@@ -1,3 +1,6 @@
 # Runs locally
 require 'iron_consumer'
-IronConsumer.run('testq')
+require 'yaml'
+
+config = YAML.load_file('config.yml')
+IronConsumer.run(config)

@@ -10,10 +10,19 @@ You can run it as is to test it, then modify it as you see fit.
 Let's run the quick example first:
 
 1. Clone this repo `git clone https://github.com/iron-io/iron_consumer_starter.git`
-1. Make a copy of `example.iron.json` called `iron.json` and update it with your token and project id (get these from HUD)
+1. Make a copy of `example.config.yml` called `config.yml` and a copy of `example.iron.json` called `iron.json` and
+replace all the settings in it especially your token and project id (get these from HUD). TODO: make it so we only need
+config.yml.
 1. Run `bundle update`
 1. Now let's add a dummy message to a queue on IronMQ (run it a few times if you want): `ruby addmsg.rb`
 1. And process it: `ruby local.rb`
+
+## Now upload and let it run on the IronWorker platform
+
+1. Run `iron_worker upload consumer`
+1. Add another message (or many) for the worker: `ruby addmsg.rb`
+1. Queue up a worker to process the queue: `iron_worker queue consumer`
+1. Boom! Check out the results in HUD.
 
 ## Modify the worker to do what you want
 
@@ -25,9 +34,6 @@ or to mobile phones.
 1. Update Gemfile with gems you need (and bundle update of course)
 1. Modify `usercode.rb` with what you want your worker to do.
 1. Test it with `ruby local.rb`
-
-## Now upload and let IronWorker do the rest of the work
-
-1. Run `iron_worker upload consumer`
+1. Upload it to IronWorker again.
 1. Schedule it: `iron_worker schedule --run-every 60 consumer`
 

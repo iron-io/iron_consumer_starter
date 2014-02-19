@@ -1,6 +1,7 @@
 runtime 'ruby'
 
 gemfile 'Gemfile'
+file 'config.yml'
 file 'iron.json'
 file 'usersetup.rb'
 file 'usercode.rb'

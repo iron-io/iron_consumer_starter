@@ -1,11 +1,14 @@
 # Simple script to put a message on the queue for testing.
 
 require 'iron_mq'
+require 'yaml'
 
-mq = IronMQ::Client.new()
+config = YAML.load_file('config.yml')
+mq = IronMQ::Client.new(config['iron'])
 
 # qname defined by user too
-qname = "testq"
+qname = config['workqueue']
+p qname
 queue = mq.queue(qname)
 msg = {
     "mystring" => "Hello #NAME#!"
