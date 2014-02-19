@@ -37,13 +37,14 @@ or to mobile phones.
 1. Upload it to IronWorker again.
 1. Queue up a job again to test it.
 
-## Now setup alerts or schedule the worker so it runs when it needs to
+## Now setup alerts or schedule the worker so it's running when it's needed
 
 Alerts will start this runner when there's things in the queue to process and will autoscale if your queue grows.
 
 1. Run `ruby setalerts.rb`
+1 Run `ruby addmsg.rb` to put a message on the queue and your worker will start automatically! BOOM!
 
-or Schedule it:
+or Schedule it to have it running all the time:
 
 1. Schedule it: `iron_worker schedule --run-every 60 consumer`
 
