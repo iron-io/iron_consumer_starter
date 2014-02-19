@@ -35,5 +35,15 @@ or to mobile phones.
 1. Modify `usercode.rb` with what you want your worker to do.
 1. Test it with `ruby local.rb`
 1. Upload it to IronWorker again.
+1. Queue up a job again to test it.
+
+## Now setup alerts or schedule the worker so it runs when it needs to
+
+Alerts will start this runner when there's things in the queue to process and will autoscale if your queue grows.
+
+1. Run `ruby setalerts.rb`
+
+or Schedule it:
+
 1. Schedule it: `iron_worker schedule --run-every 60 consumer`
 

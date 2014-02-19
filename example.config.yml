@@ -1,0 +1,9 @@
+iron:
+  token: "t"
+  project_id: "p"
+
+# Queue to pull messages off
+workqueue: myqueue
+# Queue to set alerts on
+workqueue_alertqueue: myqueue_alerts
+
