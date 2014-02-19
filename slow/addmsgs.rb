@@ -9,9 +9,14 @@ mq = IronMQ::Client.new(config['iron'])
 # qname defined by user too
 qname = config['workqueue']
 queue = mq.queue(qname)
-msg = {
-    "mystring" => "Hello #NAME#!"
-}
-queue.post(msg.to_json)
 
-puts "Added message to queue: #{queue.name} in project: #{mq.project_id}"
+100.times do |i|
+  msg = {
+      "mystring" => "Hello #NAME#!"
+  }
+  queue.post(msg.to_json)
+  puts "Adding #{i}"
+  sleep 1
+end
+
+puts "Added messages to queue: #{queue.name} in project: #{mq.project_id}"

@@ -6,4 +6,6 @@ iron:
 workqueue: myqueue
 # Queue to set alerts on
 workqueue_alertqueue: myqueue_alerts
+# Name of worker to start processing workqueue
+worker: consumer
 

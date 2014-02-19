@@ -18,9 +18,9 @@ r = q1.add_alert({:type => "fixed",
                   :direction => "asc"
                  })
 
-#r = q1.add_alert({:type => "progressive",
-#                  :trigger => 10,
-#                  :queue => q2.name,
-#                  :direction => "asc",
-#                  :snooze => 0
-#                 })
+r = q1.add_alert({:type => "progressive",
+                  :trigger => 10,
+                  :queue => q2.name,
+                  :direction => "asc",
+                  :snooze => 0
+                 })

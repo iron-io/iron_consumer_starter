@@ -1,0 +1,10 @@
+runtime 'ruby'
+
+gemfile '../Gemfile'
+file 'config.yml'
+file 'iron.json'
+file 'slowsetup.rb'
+file 'slowcode.rb'
+
+exec 'localslow.rb'
+
